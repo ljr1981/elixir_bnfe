@@ -12,15 +12,15 @@ I cannot find a BNF-E language specification for Elixir. So, I will scratch out 
 A `Module` consist of a `Defmodule` keyword followed by a `Module_name` and then a `Module_do_end` block. It can be filled with zero, one or more possible `Function` constructs.
 - - - -
 
-*`Function`* **≜** **Def** *`Function_name`* [ "(" [*`Args`*] ")" ] *`Do_end`*
+*`Function`* **≜** **Def** *`Function_name`* [ **"("** [ *`Args`* ] **")"** ] *`Do_end`*
 
 *`Do_end`* **≜** *`do`* [ *`Instructions`* ]* *`end`*
 
-*`Instructions`* **≜** [ *`Assignment`* | *`Expr`* | *`Repitition`* ]
+*`Instructions`* **≜** [ *`Assignment`* | *`Expr`* | *`Repitition`***** ]
 
 *`Assignment`* **≜** [ *`Identifier`* **=** *`Expr`* ]
 
-*`Identifier`* **≜** [ { *`a..z`*|*`A..Z`*|*`0..9`*|*`_`*|*`?`* }+ ]
+*`Identifier`* **≜** [ { **`a..z`** | **`A..Z`** | **`0..9`** | **`_`** | **`?`** }**+** ]
 
 *`Repitition`* **≜** *`For_loop`*
 
