@@ -82,10 +82,11 @@ Specimens of a terminal `construct` have no further syntactical structure. Examp
 * Identifiers, used to denote function names or variables, such as `my_func` or `x`.
 
 The `specimens` of terminal `constructs` are called `tokens`.
-In contrast, the `specimens` of a non-terminal `construct` are defined in terms of other `constructs`.
+
+In contrast, `specimens` of a non-terminal `construct` are defined in terms of other `constructs`.
 
 - - - -
-`Tokens` (also called lexical components) form the basic vocabulary of Elixir texts. By starting with `tokens` and applying the rules of syntax you may build more complex components — `specimens` of non-terminals.
+`Tokens` (also called *lexical components*) form the basic vocabulary of Elixir texts. By starting with `tokens` and applying the rules of syntax you may build more complex components — `specimens` of non-terminals.
 - - - -
 
 #### Definition: Production
