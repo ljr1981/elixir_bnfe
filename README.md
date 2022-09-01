@@ -1,42 +1,11 @@
 # EXPIRIMENTAL BNFE SPECIFICTION RULES
 An Elixir BNF-E Language Specification (work in progress)
 
-I cannot find a BNF-E language specification for Elixir. So, I will scratch out what I know and see as I see it here. Perhaps this will turn into a formal document. Who knows.
+I cannot find a BNF-E language specification for Elixir. So, I will scratchpad out what I know and see, as I see encounter it.
+
+Perhaps this will turn into a formal document. Who knows.
 
 - - - -
-## Defmodule
-*`Module`* ≜ **Defmodule** *`Module_name`* *`Module_do_end`*
-
-*`Module_do_end`* ≜ **do** [ *`Def_function`* ]* **end**
-
-- - - -
-A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` and then a `Module_do_end` block. It can be filled with zero, one or more possible `Def_function` constructs.
-
-- - - -
-## Def Function
-*`Def_function`* ≜ **Def** *`Function_name`* [ **"("** [ *`Args`* ] **")"** ] *`Do_end`*
-
-*`Do_end`* ≜ *`do`* [ *`Instructions`* ]* *`end`*
-
-*`Instructions`* ≜ [ *`Assignment`* | *`Expression`* | *`Repitition`* ]*
-
-*`Assignment`* ≜ [ *`Identifier`* **=** *`Expression`* ]
-
-*`Identifier`* ≜ [ { **`a..z`** | **`A..Z`** | **`0..9`** | **`_`** | **`?`** }**+** ]
-
-*`Repitition`* ≜ *`For_loop`*
-
-*`For_loop`* ≜ **for** *`Identifier`* "<-" *`List`**
-                    **do** *`Statement`** **end**
-
-- - - -
-```
-for suit <- suits, value <- values do
-  "#{value} of #{suit}"
-end
-```
-- - - -
-
 ## SPECIFICTION RULES
 Borrowed and (in-process of) being reformatted, using the ECMA Eiffel 367 Std as a guide.
 
@@ -172,4 +141,38 @@ Because of the difference between cases 1 and 3, "{" denotes the opening brace a
 In case 2 the use of an upper-case first letter is a consequence of the “Construct Name convention”. Special symbols are normally enclosed in double quotes (case 5), except for the double quote itself which, to avoid any confusion, appears enclosed in single quotes (case 4). In either variant, the enclosing quotes — double or single respectively — are not part of the symbol. In some contexts, such as the table of all such symbols, special symbols (cases 4 and 5) appear in bold for emphasis.
 
 In application of cases 7 and 8, occurrences of Elixir entities or function names in comments appear in italics, to avoid confusion with other comment text, as in a comment "#" Update the value of value. where the last word denotes a query of name value in the enclosing function.
+- - - -
+
+- - - -
+## Defmodule
+*`Module`* ≜ **Defmodule** *`Module_name`* *`Module_do_end`*
+
+*`Module_do_end`* ≜ **do** [ *`Def_function`* ]* **end**
+
+- - - -
+A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` and then a `Module_do_end` block. It can be filled with zero, one or more possible `Def_function` constructs.
+
+- - - -
+## Def Function
+*`Def_function`* ≜ **Def** *`Function_name`* [ **"("** [ *`Args`* ] **")"** ] *`Do_end`*
+
+*`Do_end`* ≜ *`do`* [ *`Instructions`* ]* *`end`*
+
+*`Instructions`* ≜ [ *`Assignment`* | *`Expression`* | *`Repitition`* ]*
+
+*`Assignment`* ≜ [ *`Identifier`* **=** *`Expression`* ]
+
+*`Identifier`* ≜ [ { **`a..z`** | **`A..Z`** | **`0..9`** | **`_`** | **`?`** }**+** ]
+
+*`Repitition`* ≜ *`For_loop`*
+
+*`For_loop`* ≜ **for** *`Identifier`* "<-" *`List`**
+                    **do** *`Statement`** **end**
+
+- - - -
+```
+for suit <- suits, value <- values do
+  "#{value} of #{suit}"
+end
+```
 - - - -
