@@ -188,3 +188,35 @@ for suit <- card_suits, value <- card_values do
 end
 ```
 - - - -
+## Reserved words
+
+* true, false, nil - used as atoms
+* when, and, or, not, in - used as operators
+* fn - used for anonymous function definitions
+* do, end, catch, rescue, after, else - used in do/end blocks
+
+See: [Elixir Syntax Reference](https://hexdocs.pm/elixir/1.12/syntax-reference.html)
+
+after     
+and     
+catch     
+do     
+inbits     
+inlist     
+nil     
+else     
+end
+not     
+or     
+false     
+fn     
+in     
+rescue     
+true     
+when     
+xor
+__MODULE__    
+__FILE__    
+__DIR__    
+__ENV__    
+__CALLER__
