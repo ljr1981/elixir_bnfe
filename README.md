@@ -179,13 +179,14 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 - - - -
 *`Identifier`* ≜ *`Start_char`* [ *`Continue_char`* ]* *`End_char`*
 
-*`Start_char`* ≜
+*`Start_char`* ≜ *`NFC_form_char`*
 
-*`Continue_char`* ≜
+*`Continue_char`* ≜ *`NFC_form_char`*
 
-*`End_char`* ≜
+*`End_char`* ≜ [ `nil` | `?` (003F) | `!` (0021) ]*
 
 See: [R1 Default Identifiers](https://hexdocs.pm/elixir/1.12/unicode-syntax.html#r1-default-identifiers)
+See: [R6 Filtered Normalized Identifiers](https://hexdocs.pm/elixir/1.12/unicode-syntax.html#r6-filtered-normalized-identifiers)
 - - - -
 
 
