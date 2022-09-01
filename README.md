@@ -76,9 +76,11 @@ Typesetting conventions complement the Construct Name convention: `construct` na
 
 #### Definition: Terminal, non-terminal, token
 Specimens of a terminal `construct` have no further syntactical structure. Examples include:
-• Reserved words such as `do` and `if` or `end`.
-• Manifest constants such as the integer 234; symbols such as ; (semicolon) and + (plus sign).
-• Identifiers (used to denote functions, variables) such as `my_func` and `x`.
+
+* Reserved words such as `do` and `if` or `end`.
+* Manifest constants such as the integer 234; symbols such as ; (semicolon) and + (plus sign).
+* Identifiers (used to denote functions, variables) such as `my_func` and `x`.
+
 The `specimens` of terminal `constructs` are called `tokens`.
 In contrast, the `specimens` of a non-terminal `construct` are defined in terms of other `constructs`.
 
