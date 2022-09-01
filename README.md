@@ -28,11 +28,13 @@ A `Module` consist of a `Defmodule` keyword followed by a `Module_name` and then
 *For_loop* **≜** **for** *Identifier* "<-" *List**
                     **do** *Statement** **end**
 
+- - - -
 ```
 for suit <- suits, value <- values do
   "#{value} of #{suit}"
 end
 ```
+- - - -
 
 ## EXPIRIMENTAL BNFE SPECIFICTION RULES
 Borrowed and (in-process of) being reformatted, using the ECMA Eiffel 367 Std as a guide.
