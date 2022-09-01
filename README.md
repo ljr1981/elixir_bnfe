@@ -52,7 +52,7 @@ Syntax is the set of rules describing the structure of software texts. The notat
 #### Definition: Component, construct, specimen
 Any function text, or syntactically meaningful part of it, such as an *`Instruction`*, an *`Expression`* or an *`Identifier`*, is called a `component`.
 
-The structure of any kind of `components` is described by a `construct`. A `component` of a kind described by a certain `construct` is called a `specimen` of that `construct`.
+The structure of any kind of `components` is described by a `construct`. A `component` of a kind described by a certain `construct` is called a `specimen` (or synonymously an `instance`) of that `construct`.
 
 - - - -
 For example, any particular function text, built according to the rules given in this language description, is a `component`. The `construct` function describes the structure of function texts; any function text is a specimen of that `construct`. At the other end of the complexity spectrum, an identifier such as `your_variable` is a `specimen` of the `construct` Identifier. Although we could use the term “instance” in lieu of “`specimen`”, it could cause confusion with the instances of an Elixir function — the run-time objects built according to the function specification.
