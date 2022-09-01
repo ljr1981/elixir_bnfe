@@ -174,8 +174,6 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 
 *`Assignment`* ≜ [ *`Identifier`* **=** *`Expression`* ]
 
-*`Identifier`* ≜ [ { **`a..z`** | **`A..Z`** | **`0..9`** | **`_`** | **`?`** }**+** ]
-
 - - - -
 ## Identifiers
 *`Identifier`* ≜ *`Start_char`* [ *`Continue_char`* ]* *`End_char`*
