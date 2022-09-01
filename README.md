@@ -5,19 +5,19 @@ I cannot find a BNF-E language specification for Elixir. So, I will scratch out 
 
 - - - -
 
-`*Module*` **≜** **Defmodule** `*Module_name*` `*Module_do_end*`
+`Module` **≜** **Defmodule** `Module_name` `Module_do_end`
 
-`*Module_do_end*` **≜** **do** [ `*Function*` ]* **end**
+`Module_do_end` **≜** **do** [ `Function` ]* **end**
 
 - - - -
 A `Module` consist of a `Defmodule` keyword followed by a `Module_name` and then a `Module_do_end` block. It can be filled with zero, one or more possible `Function` constructs.
 - - - -
 
-*Function* **≜** **Def** *Function_name* [ "(" [*Args*] ")" ] *Do_end*
+*`Function`* **≜** **Def** *`Function_name`* [ "(" [*`Args`*] ")" ] *`Do_end`*
 
-*Do_end* **≜** *do* [ *Instructions* ]* *end*
+*`Do_end`* **≜** *`do`* [ *`Instructions`* ]* *`end`*
 
-*Instructions* **≜** [ *Assignment* | *Expr* | *Repitition* ]
+*`Instructions`* **≜** [ *`Assignment`* | *`Expr`* | *`Repitition`* ]
 
 *Assignment* **≜** [ *Identifier* **=** *Expr* ]
 
