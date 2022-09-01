@@ -1,4 +1,4 @@
-# Elixir BNF-E
+# EXPIRIMENTAL BNFE SPECIFICTION RULES
 An Elixir BNF-E Language Specification (work in progress)
 
 I cannot find a BNF-E language specification for Elixir. So, I will scratch out what I know and see as I see it here. Perhaps this will turn into a formal document. Who knows.
@@ -37,7 +37,7 @@ end
 ```
 - - - -
 
-## EXPIRIMENTAL BNFE SPECIFICTION RULES
+## SPECIFICTION RULES
 Borrowed and (in-process of) being reformatted, using the ECMA Eiffel 367 Std as a guide.
 
 ### Syntax, validity and semantics
