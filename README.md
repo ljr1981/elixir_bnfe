@@ -49,7 +49,7 @@ Syntax is the set of rules describing the structure of software texts. The notat
 “BNF” is `Backus-Naur Form`, a traditional technique for describing the syntax of a certain category of formalism's (“context-free languages”), originally introduced for the description of Algol 60. BNF-E adds a few conventions — one `production` per `construct`, a simple notation for repetitions with separators — to make descriptions clearer. The range of formalism's that can be described by BNF-E is the same as for traditional BNF.
 - - - -
 
-### Definition: Component, construct, specimen
+#### Definition: Component, construct, specimen
 Any function text, or syntactically meaningful part of it, such as an instruction, an expression or an identifier, is called a `component`.
 
 The structure of any kind of `components` is described by a `construct`. A `component` of a kind described by a certain `construct` is called a `specimen` of that `construct`.
@@ -58,21 +58,21 @@ The structure of any kind of `components` is described by a `construct`. A `comp
 For example, any particular function text, built according to the rules given in this language description, is a `component`. The `construct` function describes the structure of function texts; any function text is a specimen of that `construct`. At the other end of the complexity spectrum, an identifier such as `your_variable` is a `specimen` of the `construct` Identifier. Although we could use the term “instance” in lieu of “`specimen`”, it could cause confusion with the instances of an Elixir function — the run-time objects built according to the function specification.
 - - - -
 
-### Construct Specimen convention
+#### Construct Specimen convention
 The phrase `an X`, where X is the name of a `construct`, serves as a shorthand for `a specimen of X`.
 
 - - - -
 For example, `a function` means `a specimen of construct function`: a text built according to the syntactical specification of the `construct` function.
 - - - -
 
-### Construct Name convention
+#### Construct Name convention
 Every `construct` has a name starting with an upper-case letter and continuing with lower-case letters, possibly with underscores (to separate parts of the name if it uses several English words).
 
 - - - -
 Typesetting conventions complement the Construct Name convention: `construct` names, such as function, always appear in Roman and in Green — distinguishing them from the black of Elixir text.
 - - - -
 
-### Definition: Terminal, non-terminal, token
+#### Definition: Terminal, non-terminal, token
 Specimens of a terminal `construct` have no further syntactical structure. Examples include:
 • Reserved words such as `do` and `if` or `end`.
 • Manifest constants such as the integer 234; symbols such as ; (semicolon) and + (plus sign).
