@@ -16,7 +16,7 @@ A `Module` consist of a `Defmodule` keyword followed by a `Module_name` and then
 
 *`Do_end`* **≜** *`do`* [ *`Instructions`* ]* *`end`*
 
-*`Instructions`* **≜** [ *`Assignment`* | *`Expr`* | *`Repitition`***** ]
+*`Instructions`* **≜** [ *`Assignment`* | *`Expr`* | *`Repitition`* ***** ]
 
 *`Assignment`* **≜** [ *`Identifier`* **=** *`Expr`* ]
 
