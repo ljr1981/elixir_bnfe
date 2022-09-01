@@ -64,7 +64,7 @@ For example, any particular function text, built according to the rules given in
 The phrase `an X`, where X is the name of a `construct`, serves as a shorthand for `a specimen of X`.
 
 - - - -
-For example, `a function` means a specimen of construct *`Def_function`*: a text built according to the syntactical specification of that `construct`.
+For example, when we say function, we mean a specimen of construct *`Def_function`* — a text built according to the syntactical specification of that `construct`.
 - - - -
 
 #### Construct Name convention
