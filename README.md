@@ -176,6 +176,19 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 
 *`Identifier`* ≜ [ { **`a..z`** | **`A..Z`** | **`0..9`** | **`_`** | **`?`** }**+** ]
 
+- - - -
+*`Identifier`* ≜ *`Start_char`* [ *`Continue_char`* ]* *`End_char`*
+
+*`Start_char`* ≜
+
+*`Continue_char`* ≜
+
+*`End_char`* ≜
+
+See: [R1 Default Identifiers](https://hexdocs.pm/elixir/1.12/unicode-syntax.html#r1-default-identifiers)
+- - - -
+
+
 *`Repitition`* ≜ *`For_loop`*
 
 *`For_loop`* ≜ **for** *`Identifier`* "<-" *`List`**
