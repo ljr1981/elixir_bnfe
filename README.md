@@ -15,7 +15,9 @@ A `Module` consist of a `Defmodule` keyword followed by a `Module_name` and then
 
 *Function* **≜** **Def** *Function_name* ["(" [*Args*] ")"] *Do_end*
 
-*Statements* **≜** [*Assignment_expr* | *Expr* | *Repitition*]
+*Do_end* **≜** *do* [*Instructions*]* *end*
+
+*Instructions* **≜** [*Assignment_expr* | *Expr* | *Repitition*]
 
 *Assignment_expr* **≜** [*Identifier* **=** *Expr*]
 
