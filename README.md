@@ -4,27 +4,27 @@ An Elixir BNF-E Language Specification (work in progress)
 I cannot find a BNF-E language specification for Elixir. So, I will scratch out what I know and see as I see it here. Perhaps this will turn into a formal document. Who knows.
 
 - - - -
-*`Module`* **≜** **Defmodule** *`Module_name`* *`Module_do_end`*
+*`Module`* ≜ **Defmodule** *`Module_name`* *`Module_do_end`*
 
-*`Module_do_end`* **≜** **do** [ *`Function`* ]* **end**
+*`Module_do_end`* ≜ **do** [ *`Function`* ]* **end**
 
 - - - -
-A `Module` consist of a `Defmodule` keyword followed by a `Module_name` and then a `Module_do_end` block. It can be filled with zero, one or more possible `Function` constructs.
+A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` and then a `Module_do_end` block. It can be filled with zero, one or more possible `Function` constructs.
 - - - -
 
 *`Function`* ≜ **Def** *`Function_name`* [ **"("** [ *`Args`* ] **")"** ] *`Do_end`*
 
-*`Do_end`* **≜** *`do`* [ *`Instructions`* ]* *`end`*
+*`Do_end`* ≜ *`do`* [ *`Instructions`* ]* *`end`*
 
-*`Instructions`* **≜** [ *`Assignment`* | *`Expr`* | *`Repitition`* ]*
+*`Instructions`* ≜ [ *`Assignment`* | *`Expr`* | *`Repitition`* ]*
 
-*`Assignment`* **≜** [ *`Identifier`* **=** *`Expr`* ]
+*`Assignment`* ≜ [ *`Identifier`* **=** *`Expr`* ]
 
-*`Identifier`* **≜** [ { **`a..z`** | **`A..Z`** | **`0..9`** | **`_`** | **`?`** }**+** ]
+*`Identifier`* ≜ [ { **`a..z`** | **`A..Z`** | **`0..9`** | **`_`** | **`?`** }**+** ]
 
-*`Repitition`* **≜** *`For_loop`*
+*`Repitition`* ≜ *`For_loop`*
 
-*`For_loop`* **≜** **for** *`Identifier`* "<-" *`List`**
+*`For_loop`* ≜ **for** *`Identifier`* "<-" *`List`**
                     **do** *`Statement`** **end**
 
 - - - -
@@ -86,12 +86,12 @@ In contrast, the `specimens` of a non-terminal `construct` are defined in terms 
 A `production` is a formal description of the structure of all `specimens` of a non-terminal `construct`.
 It has the form
 
-*`Construct`* **≜** `right-side`
+*`Construct`* ≜ `right-side`
 
 where `right-side` describes how to obtain specimens of the Construct.
 
 - - - -
-The symbol **≜** may be read aloud as “is defined as” (or contains). BNF-E uses exactly one production for each non-terminal. The reason for this convention is
+The symbol ≜ may be read aloud as “is defined as” (or contains). BNF-E uses exactly one production for each non-terminal. The reason for this convention is
 explained below.
 - - - -
 
