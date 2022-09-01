@@ -177,6 +177,7 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 *`Identifier`* ≜ [ { **`a..z`** | **`A..Z`** | **`0..9`** | **`_`** | **`?`** }**+** ]
 
 - - - -
+## Identifiers
 *`Identifier`* ≜ *`Start_char`* [ *`Continue_char`* ]* *`End_char`*
 
 *`Start_char`* ≜ *`NFC_form_char`*
