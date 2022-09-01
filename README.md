@@ -73,10 +73,11 @@ explained below.
 
 #### Kinds of production
 A `production` is of one of the following three kinds, distinguished by the form of the `right-side`:
-• `Aggregate`, describing a construct whose specimens are made of a fixed sequence of parts,
+
+* `Aggregate`, describing a construct whose specimens are made of a fixed sequence of parts,
 some of which may be optional.
-• `Choice`, describing a construct having a set of given variants.
-• `Repetition`, describing a construct whose specimens are made of a variable number of parts, all specimens of a given construct.
+* `Choice`, describing a construct having a set of given variants.
+* `Repetition`, describing a construct whose specimens are made of a variable number of parts, all specimens of a given construct.
 
 #### Definition: Aggregate production
 An aggregate `right side` is of the form C1 C2 ... Cn (n > 0), where every one of the Ci is a `construct` and any contiguous subsequence may appear in square brackets as [Ci ... Cj ] for 1 ≤ i ≤ j ≤ n.
