@@ -112,44 +112,48 @@ The language definition makes only moderate use of recursion thanks to the avail
 Every non-terminal construct is defined by exactly one production.
 
 - - - -
-Unlike in most BNF variants, every BNF-E production always uses exactly one of Aggregate, Choice and Repetition, never mixing them in the `right side`s. This convention yields a considerably clearer grammar, even if it has a few more productions (which in the end is good since they give a more accurate image of the language’s complexity).
+Unlike in most BNF variants, every BNF-E production always uses exactly one of Aggregate, Choice and Repetition, never mixing them in the `right side`. This convention yields a considerably clearer grammar, even if it has a few more productions (which in the end is good since they give a more accurate image of the language’s complexity).
 - - - -
 
 #### Definition: Non-production syntax rule
 A non-production syntax rule, marked “(non-production)”, is a syntax property expressed outside of the BNF-E formalism.
 
 - - - -
-Unlike validity rules, non-production syntax rules belong to the syntax, that is to say the description of the structure of Elixir texts, but they capture properties that are not expressible, or not conveniently expressible, through a context-free grammar.
+Unlike validity rules, non-production syntax rules belong to the syntax, that is to say, the description of the structure of Elixir texts, but they capture properties that are not expressible, or not conveniently expressible, through a context-free grammar.
 
 For example the BNF-E Aggregate productions allow successive `right-side` components to be separated by an arbitrary break — any sequence of spaces, tabs and “new line” characters. We still use BNF-E to specify such constructs, but add a non-production syntax rule stating the supplementary constraints.
 - - - -
 
 #### Textual conventions
-The syntax (BNF-E) productions and other rules of the Standard apply the following conventions:
+The syntax (BNF-E) productions and other rules of this Standard apply the following conventions:
 
-1 - Symbols of BNF-E itself, such as the vertical bars | signaling a choice `production`, appear in black (non-bold, non-italic).
+1 - Symbols of BNF-E itself, such as the vertical bars `|`, signaling a choice `production`, appear in black (non-bold, non-italic).
 
-2 - Any `construct` name appears in dark green (non-bold, non-italic), with a first letter in upper case, as `function`.
+2 - Any `construct` name appears as *`gray-boxed`* (non-bold, italic), with a first letter in upper case, as *`Def_function`*.
 
 3 - Any component (Elixir text element) appears in black.
 
 4 - The double quote, one of Elixir’s special symbols, appears in productions as '"': a double quote character (black like other Elixir text) enclosed in two single quote characters (black since they belong to BNF-E, not Elixir).
 
-5 - All other special symbols appear in double quotes, for example a comma as ",", an assignment symbol as "=", a single quote as "'" (double quotes black, single quote black).
+5 - All other special symbols appear in double quotes, for example a comma as `","`, or an assignment symbol as `"="`, or a single quote as `"'"` (double quotes black, single quote black).
 
-6 - Keywords and other reserved words, such as **do** and **if**, appear in bold (black like other Elixir text). They do not require quotes since the conventions avoid ambiguity with construct names: function is the name of a construct, **do** a keyword.
+6 - Keywords and other reserved words, such as **do** and **if**, appear in bold (black like other Elixir text). They do not require quotes since the conventions avoid ambiguity with construct names: *`Def_function`* is the name of a `construct`, while **do** is a keyword.
 
-7 - Examples of Elixir comment text appear in non-bold, non-italic (and in black), as **#** A comment.
+7 - Examples of Elixir comment text appear in non-bold, non-italic (and in black), as **#** or a comment.
 
-8 - Other elements of Elixir text, such as entities and function names (including in comments) appear in non-bold italic (black). The color-related parts of these conventions do not affect the language definition, which remains unambiguous under black-and-white printing (thanks to the letter-case and font parts of the conventions). Color printing is recommended for readability.
+8 - Other elements of Elixir text, such as entities and function names (including in comments) appear in non-bold italic (black). The color-related parts of these conventions do not affect the language definition, which remains unambiguous under black-and-white printing (thanks to the letter-case and font parts of the conventions).
+
+**NOTE**: Color printing will be recommended for readability when typesetting other than Github markdown is used. For now, black-and-white printing is good enough for disambiguation.
 
 - - - -
-Because of the difference between cases 1 and 3, "{" denotes the opening brace as it might appear in an Elixir function text, whereas { is a symbol of the syntax description, used in `repetition` `productions`.
+Because of the difference between cases 1 and 3, `"{"` denotes the opening brace as it might appear in an Elixir function text, whereas `{` is a symbol of the syntax description, used in `Repetition` `Productions`.
 
-In case 2 the use of an upper-case first letter is a consequence of the “Construct Name convention”. Special symbols are normally enclosed in double quotes (case 5), except for the double quote itself which, to avoid any confusion, appears enclosed in single quotes (case 4). In either variant, the enclosing quotes — double or single respectively — are not part of the symbol. In some contexts, such as the table of all such symbols, special symbols (cases 4 and 5) appear in bold for emphasis.
+In case 2, the use of an upper-case first letter is a consequence of the “Construct Name convention”. Special symbols are normally enclosed in double quotes (case 5), except for the double quote itself which, to avoid any confusion, appears enclosed in single quotes (case 4). In either variant, the enclosing quotes — double or single respectively — are not part of the symbol. In some contexts, such as the table of all such symbols, special symbols (cases 4 and 5) appear in bold for emphasis.
 
-In application of cases 7 and 8, occurrences of Elixir entities or function names in comments appear in italics, to avoid confusion with other comment text, as in a comment "#" Update the value of value. where the last word denotes a query of name value in the enclosing function.
+In application of cases 7 and 8, occurrences of Elixir entities or function names in comments appear in italics, to avoid confusion with other comment text, as in a comment "#" Update the value of value. where the last word denotes a function of name value in the enclosing function.
 - - - -
+
+# Experimental Elixir Language Specification
 
 - - - -
 ## Defmodule
