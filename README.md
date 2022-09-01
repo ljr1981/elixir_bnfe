@@ -197,26 +197,13 @@ end
 
 See: [Elixir Syntax Reference](https://hexdocs.pm/elixir/1.12/syntax-reference.html)
 
-after     
-and     
-catch     
-do     
-inbits     
-inlist     
-nil     
-else     
-end
-not     
-or     
-false     
-fn     
-in     
-rescue     
-true     
-when     
-xor
-__MODULE__    
-__FILE__    
-__DIR__    
-__ENV__    
-__CALLER__
+Also:
+
+* inbits     
+* inlist                                                       
+* xor
+* __MODULE__    
+* __FILE__    
+* __DIR__    
+* __CALLER__
+* __ENV__    
