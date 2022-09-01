@@ -68,10 +68,10 @@ For example, when we say function, we mean a specimen of the construct *`Def_fun
 - - - -
 
 #### Construct Name convention
-Every `construct` has a name starting with an upper-case letter and continuing with lower-case letters, possibly with underscores (to separate parts of the name if it uses several English words).
+Every `construct` has a name starting with an upper-case letter and continuing with lower-case letters, possibly with underscores (to separate parts of the name, if it uses several English words).
 
 - - - -
-Typesetting conventions complement the Construct Name convention: `construct` names, such as function, always appear in Roman and in Green — distinguishing them from the black of Elixir text.
+Typesetting conventions complement the Construct Name convention: `construct` names, such as *`Def_function`*, always appear in Roman and in gray-shadow-boxed — distinguishing them from the black of normal Elixir code text.
 - - - -
 
 #### Definition: Terminal, non-terminal, token
