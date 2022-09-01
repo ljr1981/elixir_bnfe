@@ -183,7 +183,7 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 
 - - - -
 ```
-for suit <- suits, value <- values do
+for suit <- card_suits, value <- card_values do
   "#{value} of #{suit}"
 end
 ```
