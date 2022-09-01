@@ -55,7 +55,9 @@ Any function text, or syntactically meaningful part of it, such as an *`Instruct
 The structure of any kind of `components` is described by a `construct`. A `component` of a kind described by a certain `construct` is called a `specimen` (or synonymously an `instance`) of that `construct`.
 
 - - - -
-For example, any particular function text, built according to the rules given in this language description, is a `component`. The `construct` function describes the structure of function texts; any function text is a specimen of that `construct`. At the other end of the complexity spectrum, an identifier such as `your_variable` is a `specimen` of the `construct` Identifier. Although we could use the term “instance” in lieu of “`specimen`”, it could cause confusion with the instances of an Elixir function — the run-time objects built according to the function specification.
+For example, any particular function text, built according to the rules given in this language description, is a `component`. The `construct` *`Def_function`* describes the structure of function texts; any function text is a specimen (or instance) of that `construct`. At the other end of the complexity spectrum, an *`Identifier`* such as `your_variable` is a `specimen` of the `construct` called *`Identifier`*.
+
+**NOTE**: We may find that using the term “instance” in lieu of “`specimen`”, could cause confusion with the instances of an Elixir *`Def_function`* — the run-time objects built according to the function specification.
 - - - -
 
 #### Construct Specimen convention
