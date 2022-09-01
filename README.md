@@ -190,20 +190,20 @@ end
 - - - -
 ## Reserved words
 
-* true, false, nil - used as atoms
-* when, and, or, not, in - used as operators
-* fn - used for anonymous function definitions
-* do, end, catch, rescue, after, else - used in do/end blocks
+* `true`, `false`, `nil` - used as atoms
+* `when`, `and`, `or`, `not`, `in` - used as operators
+* `fn` - used for anonymous function definitions
+* `do`, `end`, `catch`, `rescue`, `after`, `else` - used in do/end blocks
 
 See: [Elixir Syntax Reference](https://hexdocs.pm/elixir/1.12/syntax-reference.html)
 
 Also:
 
-* inbits     
-* inlist                                                       
-* xor
-* __MODULE__    
-* __FILE__    
-* __DIR__    
-* __CALLER__
-* __ENV__    
+* `inbits`     
+* `inlist`                                                       
+* `xor`
+* `__MODULE__`    
+* `__FILE__`    
+* `__DIR__`    
+* `__CALLER__`
+* `__ENV__`    
