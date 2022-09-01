@@ -31,11 +31,6 @@ for suit <- suits, value <- values do
   "#{value} of #{suit}"
 end
 ```
-## SCRATCH
-
-## MISC NOTES
-
-The ≜ (read as contains) is U+225C UTF-8 (Ctrl-Shift-u 225C on Linux keyboard)
 
 ## EXPIRIMENTAL BNFE SPECIFICTION RULES
 Borrowed and (in-process of) being reformatted, using the ECMA Eiffel 367 Std as a guide.
