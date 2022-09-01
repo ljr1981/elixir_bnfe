@@ -18,9 +18,9 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 
 *`Do_end`* ≜ *`do`* [ *`Instructions`* ]* *`end`*
 
-*`Instructions`* ≜ [ *`Assignment`* | *`Expr`* | *`Repitition`* ]*
+*`Instructions`* ≜ [ *`Assignment`* | *`Expression`* | *`Repitition`* ]*
 
-*`Assignment`* ≜ [ *`Identifier`* **=** *`Expr`* ]
+*`Assignment`* ≜ [ *`Identifier`* **=** *`Expression`* ]
 
 *`Identifier`* ≜ [ { **`a..z`** | **`A..Z`** | **`0..9`** | **`_`** | **`?`** }**+** ]
 
@@ -50,7 +50,7 @@ Syntax is the set of rules describing the structure of software texts. The notat
 - - - -
 
 #### Definition: Component, construct, specimen
-Any function text, or syntactically meaningful part of it, such as an instruction, an expression or an identifier, is called a `component`.
+Any function text, or syntactically meaningful part of it, such as an *`Instruction`*, an *`Expression`* or an *`Identifier`*, is called a `component`.
 
 The structure of any kind of `components` is described by a `construct`. A `component` of a kind described by a certain `construct` is called a `specimen` of that `construct`.
 
