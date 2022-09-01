@@ -7,14 +7,14 @@ I cannot find a BNF-E language specification for Elixir. So, I will scratch out 
 ## Defmodule
 *`Module`* ≜ **Defmodule** *`Module_name`* *`Module_do_end`*
 
-*`Module_do_end`* ≜ **do** [ *`Function`* ]* **end**
+*`Module_do_end`* ≜ **do** [ *`Def_function`* ]* **end**
 
 - - - -
-A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` and then a `Module_do_end` block. It can be filled with zero, one or more possible `Function` constructs.
+A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` and then a `Module_do_end` block. It can be filled with zero, one or more possible `Def_function` constructs.
 
 - - - -
 ## Def Function
-*`Function`* ≜ **Def** *`Function_name`* [ **"("** [ *`Args`* ] **")"** ] *`Do_end`*
+*`Def_function`* ≜ **Def** *`Function_name`* [ **"("** [ *`Args`* ] **")"** ] *`Do_end`*
 
 *`Do_end`* ≜ *`do`* [ *`Instructions`* ]* *`end`*
 
