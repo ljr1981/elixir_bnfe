@@ -80,22 +80,29 @@ some of which may be optional.
 * `Repetition`, describing a construct whose specimens are made of a variable number of parts, all specimens of a given construct.
 
 #### Definition: Aggregate production
-An aggregate `right side` is of the form C1 C2 ... Cn (n > 0), where every one of the Ci is a `construct` and any contiguous subsequence may appear in square brackets as [Ci ... Cj ] for 1 ≤ i ≤ j ≤ n.
-Every `specimen` of the corresponding `construct` consists of a `specimen` of C1, followed by a `specimen` of C2, ..., followed by a `specimen` of Cn, with the provision that for any subsequence in brackets the corresponding `specimens` may be absent.
+An aggregate `right side` is of the form `C1 C2 ... Cₙ (n > 0)`, where every one of the `Cₙ` is a `construct` and any contiguous subsequence may appear in square brackets as `[ Cₙ ... Cₖ ]` for 1 ≤ n ≤ k ≤ n.
+
+Every `specimen` of the corresponding `construct` consists of a `specimen` of C1, followed by a `specimen` of C2, ..., followed by a `specimen` of Cₙ, with the provision that for any subsequence in brackets the corresponding `specimens` may be absent.
 
 #### Definition: Choice production
-A choice `right-side` is of the form C1 | C2 | ... | Cn (n > 1), where every one of the Ci is a construct.
-Every `specimen` of the corresponding `construct` consists of exactly one `specimen` of one of the Ci.
+A choice `right-side` is of the form `C1 | C2 | ... | Cₙ (n > 1)`, where every one of the Cₙ is a construct.
+
+Every `specimen` of the corresponding `construct` consists of exactly one `specimen` of one of the Cₙ.
 
 #### Definition: Repetition production, separator
 A `repetition` `right-side` is of one of the two forms:
-{C § ...}*
-{C § ...}+
+
+* {C § ...}*
+* {C § ...}+
+
 where C and § (the separator) are constructs.
+
 Every `specimen` of the corresponding `construct` consists of zero or more (one or more in the second form) `specimens` of C, each separated from the next, if any, by a `specimen` of §.
+
 The following abbreviations may be used if the separator is empty:
-C*
-C+
+
+* C*
+* C+
 
 - - - -
 The language definition makes only moderate use of recursion thanks to the availability of Repetition productions: when the purpose is simply to describe a construct whose specimens may contain successive specimens of another construct, a Repetition generally gives a clearer picture; see for example the definition of Compound as a repetition of Instruction. Recursion remains necessary to describe constructs with unbounded nesting possibilities, such as Conditional and Loop.
