@@ -181,6 +181,7 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 - - - -
 
 ## Data Types
+<blockquote>
 *`Manifest_value` ≜
   *`Atom`* |
   *`Integer_constant`* |
@@ -192,6 +193,7 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
   *`Tuple_constant`* |
   *`Binary_constant`* |
   *`Map_constant`*
+</blockquote>
 
 - - - -
 A manifest value is a string of text where the basic data type is self-evident (e.g. manifestly evident) from the text. Therefore, the text **123** is manifestly an integer value of one hundred and twenty three. Likewise, the text **3.14** is manifestly a floating point value equal to *Pi*.
