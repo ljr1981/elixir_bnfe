@@ -175,6 +175,16 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 *`Assignment`* ≜ [ *`Identifier`* **=** *`Expression`* ]
 
 - - - -
+## Data Types
+### Numbers
+*`Integer`* ≜ { *`Numeric_digit`* | "*_*" }+
+
+*`Float`* ≜ { { *`Numeric_digit`* | "*_*" }+ **.** { *`Numeric_digit`* }+ }
+
+*`Numeric_digit`* ≜ { 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
+
+
+- - - -
 ## Identifiers
 *`Identifier`* ≜ *`Start_char`* [ *`Continue_char`* ]* *`End_char`*
 
