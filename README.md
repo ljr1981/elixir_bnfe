@@ -180,8 +180,9 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
   *`Atom`* |
   *`Integer_constant`* |
   *`Float_constant`* |
-  *`Manifest_string`* |
-  *`Character_constant`*
+  *`Character_constant`* |
+  *`Boolean_constant`* |
+  *`Manifest_string`*
 - - - -
 A manifest value is a string of text where the basic data type is self-evident (e.g. manifestly evident) from the text. Therefore, the text **123** is manifestly an integer value of one hundred and twenty three. Likewise, the text **3.14** is manifestly a floating point value equal to *Pi*.
 - - - -
@@ -226,13 +227,22 @@ Integers (**1234**) and floats (**123.4**) in Elixir are represented as a sequen
 
 *`Boolean_constant`* ≜ **`true`** | **`false`**
 
+### Strings
+*`Manifest_string`* ≜ [ *`Single_line_string`* | *`Multi_line_string`* ]
+
+*`Single_line_string`* ≜ **"** *`String`* **"**
+
+*`Multi_line_string`* ≜ **"""** *`String`* **"""**
+
+*`String`* ≜ { *`NFC_form_char`* | *`End_char`* | **\n** }**⁺**
+
 - - - -
 ## Identifiers
 *`Identifier`* ≜ *`Start_char`* [ *`Continue_char`* ]* *`End_char`*
 
 *`Start_char`* ≜ *`NFC_form_char`*
 
-*`Continue_char`* ≜ *`NFC_form_char`*
+*`Continue_char`* ≜ { *`NFC_form_char`* }**⁺**
 
 *`End_char`* ≜ [ `nil` | `?` (003F) | `!` (0021) ]*
 
