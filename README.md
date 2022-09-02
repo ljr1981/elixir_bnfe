@@ -232,9 +232,9 @@ Integers (**1234**) and floats (**123.4**) in Elixir are represented as a sequen
 
 *`Single_line_string`* ≜ **"** *`String`* **"**
 
-*`Multi_line_string`* ≜ **"""** *`String`* **"""**
+*`Multi_line_string`* ≜ **"""** { *`String`* **\n** }**⁺** **"""**
 
-*`String`* ≜ { *`NFC_form_char`* | *`End_char`* | **\n** }**⁺**
+*`String`* ≜ { *`UTF8_char`* }**⁺**
 
 - - - -
 ## Identifiers
