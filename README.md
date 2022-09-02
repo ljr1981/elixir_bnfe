@@ -177,12 +177,27 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 - - - -
 ## Data Types
 ### Numbers
-*`Integer`* ≜ { *`Numeric_digit`* | "*_*" }+
+*`Manifest_value` ≜
+  *`Character_constant`* |
+  *`Integer_constant`* |
+  *`Float_constant`* |
+  *`Manifest_string`*
+
+*`Sign`* ≜ "**+**" | "**–**"
+
+*`Integer_constant`* ≜ [*`Sign`*] *`Integer`*
+
+*`Character_constant`* ≜ " ' " *`Character`* " ' "
+
+*`Boolean_constant`* ≜ **true** | **false**
+
+*`Float_constant`* ≜ [`Sign`] `Float`
+
+*`Integer_constant`* ≜ { *`Numeric_digit`* | "*_*" }+
 
 *`Float`* ≜ { { *`Numeric_digit`* | "*_*" }+ **.** { *`Numeric_digit`* }+ }
 
 *`Numeric_digit`* ≜ { 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
-
 
 - - - -
 ## Identifiers
