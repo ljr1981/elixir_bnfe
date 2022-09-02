@@ -294,6 +294,8 @@ Both keyword lists (list of two-element tuples where the first element is atom) 
 
 - - - -
 Structs built on the map syntax by passing the struct name between `%` and `{`. For example, `%User{...}`.
+
+For a Defmodule named `Image` in project `Identicon` with a defined struct, then we would use `%Identicon.Image{...}` as a reference to the Struct.
 - - - -
 
 ## Identifiers
