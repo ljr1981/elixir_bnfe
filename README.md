@@ -190,7 +190,8 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
   *`Manifest_string`* |
   *`List_constant`* |
   *`Tuple_constant`* |
-  *`Binary_constant`*
+  *`Binary_constant`* |
+  *`Map_constant`*
 
 - - - -
 A manifest value is a string of text where the basic data type is self-evident (e.g. manifestly evident) from the text. Therefore, the text **123** is manifestly an integer value of one hundred and twenty three. Likewise, the text **3.14** is manifestly a floating point value equal to *Pi*.
@@ -270,19 +271,25 @@ Strings are always represented as themselves in the AST.
 - - - -
 
 ### Lists
-*`List_constant`* ≜ **[** {*`Element`*}**⁺** **]**
+*`List_constant`* ≜ **[** { *`Element`* }**⁺** **]**
 
 - - - -
 - - - -
 
 ### Tuples
-*`Tuple_constant`* ≜ **{** {*`Element`*}**⁺** **}**
+*`Tuple_constant`* ≜ **{** { *`Element`* }**⁺** **}**
 
 - - - -
 - - - -
 
 ### Binaries
-*`Binary_constant`* ≜ **<<** {*`Element`*}**⁺** **>>**
+*`Binary_constant`* ≜ **<<** { *`Element`* }**⁺** **>>**
+
+- - - -
+- - - -
+
+### Maps
+*`Map_constant`* ≜ **%<<** { *`Element`* }**⁺** **>>**
 
 - - - -
 - - - -
