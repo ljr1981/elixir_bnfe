@@ -189,7 +189,8 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
       *`List_constant`* |
       *`Tuple_constant`* |
       *`Binary_constant`* |
-      *`Map_constant`*
+      *`Map_constant`* |
+      *`Struct_constant`*
 
 - - - -
 A manifest value is a string of text where the basic data type is self-evident (e.g. manifestly evident) from the text. Therefore, the text **123** is manifestly an integer value of one hundred and twenty three. Likewise, the text **3.14** is manifestly a floating point value equal to *Pi*.
@@ -285,6 +286,14 @@ Data structures such as lists, tuples, and binaries are marked respectively by t
 Maps use the %{...} notation and each key-value is given by pairs marked with =>, such as %{"hello" => 1, 2 => "world"}.
 
 Both keyword lists (list of two-element tuples where the first element is atom) and maps with atom keys support a keyword notation where the colon character : is moved to the end of the atom. %{hello: "world"} is equivalent to %{:hello => "world"} and [foo: :bar] is equivalent to [{:foo, :bar}]. This notation is a syntax sugar that emits the same AST representation. It will be explained in later sections.
+- - - -
+
+## Structs
+
+*`Struct_constant`* ≜ '**%**' *`Struct_name`* '**<<**' { *`Element`* }**⁺** '**>>**'
+
+- - - -
+Structs built on the map syntax by passing the struct name between `%` and `{`. For example, `%User{...}`.
 - - - -
 
 ## Identifiers
