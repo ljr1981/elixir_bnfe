@@ -174,7 +174,7 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 
 *`Do_end`* ≜ *`do`* { *`Instructions`* }* *`end`*
 
-*`Instructions`* ≜ { *`Assignment`* | *`Expression`* | *`Repitition`* }*
+*`Instructions`* ≜ { *`Assignment`* | *`Expression`* | *`Repitition`* }**⁺**
 
 *`Assignment`* ≜ [ *`Identifier`* '**=**' *`Expression`* ]
 
