@@ -273,25 +273,22 @@ Strings are always represented as themselves in the AST.
 ### Lists
 *`List_constant`* ≜ **[** { *`Element`* }**⁺** **]**
 
-- - - -
-- - - -
-
 ### Tuples
 *`Tuple_constant`* ≜ **{** { *`Element`* }**⁺** **}**
-
-- - - -
-- - - -
 
 ### Binaries
 *`Binary_constant`* ≜ **<<** { *`Element`* }**⁺** **>>**
 
 - - - -
-- - - -
+Data structures such as lists, tuples, and binaries are marked respectively by the delimiters [...], {...}, and <<...>>. Each element is separated by comma. A trailing comma is also allowed, such as in [1, 2, 3,].- - - -
 
 ### Maps
 *`Map_constant`* ≜ **%<<** { *`Element`* }**⁺** **>>**
 
 - - - -
+Maps use the %{...} notation and each key-value is given by pairs marked with =>, such as %{"hello" => 1, 2 => "world"}.
+
+Both keyword lists (list of two-element tuples where the first element is atom) and maps with atom keys support a keyword notation where the colon character : is moved to the end of the atom. %{hello: "world"} is equivalent to %{:hello => "world"} and [foo: :bar] is equivalent to [{:foo, :bar}]. This notation is a syntax sugar that emits the same AST representation. It will be explained in later sections.
 - - - -
 
 ## Identifiers
