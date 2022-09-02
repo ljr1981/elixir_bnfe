@@ -178,10 +178,13 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 ## Data Types
 ### Numbers
 *`Manifest_value` ≜
+  *`Atom`* |
   *`Character_constant`* |
   *`Integer_constant`* |
   *`Float_constant`* |
   *`Manifest_string`*
+
+*`Atom`* ≜ "*:*" [ *`Identifier`* | '*"*' *`Identifier`* '*"*' ]
 
 *`Sign`* ≜ "**+**" | "**–**"
 
@@ -193,7 +196,7 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 
 *`Float_constant`* ≜ [`Sign`] `Float`
 
-*`Integer_constant`* ≜ { *`Numeric_digit`* | "*_*" }+
+*`Integer`* ≜ { *`Numeric_digit`* | "*_*" }+
 
 *`Float`* ≜ { { *`Numeric_digit`* | "*_*" }+ **.** { *`Numeric_digit`* }+ }
 
