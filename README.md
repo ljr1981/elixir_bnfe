@@ -181,7 +181,7 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 - - - -
 
 ## Data Types
-<pre>*`Manifest_value` ≜
+*`Manifest_value` ≜
       *`Atom`* |
       *`Integer_constant`* |
       *`Float_constant`* |
@@ -192,7 +192,6 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
       *`Tuple_constant`* |
       *`Binary_constant`* |
       *`Map_constant`*
-</pre>
 
 - - - -
 A manifest value is a string of text where the basic data type is self-evident (e.g. manifestly evident) from the text. Therefore, the text **123** is manifestly an integer value of one hundred and twenty three. Likewise, the text **3.14** is manifestly a floating point value equal to *Pi*.
@@ -201,12 +200,11 @@ A manifest value is a string of text where the basic data type is self-evident (
 ### Atoms
 *`Atom`* ≜ "**:**" [ *`Sequence`* | '**"**' *`Sequence`* '**"**' ]
 
-<pre>
 *`Sequence`* ≜ { *`Unicode_letters`* |
                   *`Numbers`* |
                   *`Underscore`* |
                   *`@`* }* { '**!**' | '**?**' }
-</pre>
+
 - - - -
 Unquoted atoms start with a colon (:) which must be immediately followed by a Unicode letter or an underscore. The atom may continue using a sequence of Unicode letters, numbers, underscores, and @. Atoms may end in ! or ?. See Unicode syntax for a formal specification. Valid unquoted atoms are: `:ok`, `:ISO8601`, and `:integer?`.
 
@@ -235,10 +233,8 @@ Integers (**1234**) and floats (**123.4**) in Elixir are represented as a sequen
 - - - -
 
 ### Charlists
-<pre>
 *`Charlist_constant`* ≜ [ *`Single_line_charlist`* |
                           *`Multi_line_charlist`*  ]
-</pre>
 *`Single_line_charlist`* ≜ "**'**" { *`Character`* }**⁺** "**'**"
 
 *`Multi_line_charlist`* ≜ "**'''**" { *`Character`* }**⁺** "**'''**"
