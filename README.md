@@ -170,13 +170,13 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 - - - -
 
 ## Def Function
-*`Def_function`* ≜ **Def** *`Function_name`* [ **"("** [ *`Args`* ] **")"** ] *`Do_end`*
+*`Def_function`* ≜ **Def** *`Function_name`* [ '**(**' [ *`Args`* ] '**)**' ] *`Do_end`*
 
 *`Do_end`* ≜ *`do`* [ *`Instructions`* ]* *`end`*
 
 *`Instructions`* ≜ [ *`Assignment`* | *`Expression`* | *`Repitition`* ]*
 
-*`Assignment`* ≜ [ *`Identifier`* **=** *`Expression`* ]
+*`Assignment`* ≜ [ *`Identifier`* '**=**' *`Expression`* ]
 
 - - - -
 
@@ -204,7 +204,7 @@ A manifest value is a string of text where the basic data type is self-evident (
 *`Sequence`* ≜ { *`Unicode_letters`* |
                   *`Numbers`* |
                   *`Underscore`* |
-                  *`@`* }* { "**!**" | "**?**" }
+                  *`@`* }* { '**!**' | '**?**' }
 
 - - - -
 Unquoted atoms start with a colon (:) which must be immediately followed by a Unicode letter or an underscore. The atom may continue using a sequence of Unicode letters, numbers, underscores, and @. Atoms may end in ! or ?. See Unicode syntax for a formal specification. Valid unquoted atoms are: :ok, :ISO8601, and :integer?.
@@ -217,7 +217,7 @@ All operators in Elixir are also valid atoms. Valid examples are :foo, :FOO, :fo
 - - - -
 
 ### Numbers
-*`Sign`* ≜ "**+**" | "**–**"
+*`Sign`* ≜ '**+**' | '**–**'
 
 *`Integer_constant`* ≜ [*`Sign`*] *`Integer`*
 
@@ -260,9 +260,9 @@ If a list is made of non-negative integers, where each integer represents a Unic
 ### Strings
 *`Manifest_string`* ≜ [ *`Single_line_string`* | *`Multi_line_string`* ]
 
-*`Single_line_string`* ≜ **"** *`String`* **"**
+*`Single_line_string`* ≜ '**"**' *`String`* '**"**'
 
-*`Multi_line_string`* ≜ **"""** { *`String`* **\n** }**⁺** **"""**
+*`Multi_line_string`* ≜ '**"""**' { *`String`* **\n** }**⁺** '**"""**'
 
 *`String`* ≜ { *`UTF8_char`* }**⁺**
 
