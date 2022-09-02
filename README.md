@@ -201,11 +201,12 @@ A manifest value is a string of text where the basic data type is self-evident (
 ### Atoms
 *`Atom`* ≜ "**:**" [ *`Sequence`* | '**"**' *`Sequence`* '**"**' ]
 
+<pre>
 *`Sequence`* ≜ { *`Unicode_letters`* |
                   *`Numbers`* |
                   *`Underscore`* |
                   *`@`* }* { '**!**' | '**?**' }
-
+</pre>
 - - - -
 Unquoted atoms start with a colon (:) which must be immediately followed by a Unicode letter or an underscore. The atom may continue using a sequence of Unicode letters, numbers, underscores, and @. Atoms may end in ! or ?. See Unicode syntax for a formal specification. Valid unquoted atoms are: `:ok`, `:ISO8601`, and `:integer?`.
 
