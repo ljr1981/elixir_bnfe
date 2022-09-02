@@ -298,6 +298,17 @@ Structs built on the map syntax by passing the struct name between `%` and `{`. 
 For a Defmodule named `Image` in project `Identicon` with a defined struct, then we would use `%Identicon.Image{...}` as a reference to the Struct.
 - - - -
 
+## Expressions
+
+### Variables
+*`Variable`* ≜ `???`
+
+- - - -
+Variables in Elixir must start with an underscore or a Unicode letter that is not in uppercase or titlecase. The variable may continue using a sequence of Unicode letters, numbers, and underscores. Variables may end in ? or !. See Unicode syntax for a formal specification.
+
+Elixir's naming conventions recommend variables to be in snake_case format.
+- - - -
+
 ## Identifiers
 *`Identifier`* ≜ *`Start_char`* [ *`Continue_char`* ]* *`End_char`*
 
