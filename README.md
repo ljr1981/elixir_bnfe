@@ -216,7 +216,7 @@ All operators in Elixir are also valid atoms. Valid examples are :foo, :FOO, :fo
 
 *`Integer`* ≜ { *`Numeric_digit`* | '**_**' }**⁺**
 
-*`Float`* ≜ { { *`Numeric_digit`* | '**_**' }**⁺** '**.**' { *`Numeric_digit`* }**⁺** }
+*`Float`* ≜ { *`Numeric_digit`* | '**_**' }**⁺** '**.**' { *`Numeric_digit`* }**⁺**
 
 *`Numeric_digit`* ≜ { 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
 
