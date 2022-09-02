@@ -246,8 +246,10 @@ Multi-line charlists are written with three single-quotes ('''), the same way mu
 
 Charlists are always represented as themselves in the AST.
 
-For more in-depth information, please read the "Charlists" section in the List module.
+If a list is made of non-negative integers, where each integer represents a Unicode code point, the list can also be called a charlist. These integers must:
 
+be within the range 0..0x10FFFF (0..1_114_111);
+and be out of the range 0xD800..0xDFFF (55_296..57_343), which is reserved in Unicode for UTF-16 surrogate pairs.
 - - - -
 
 ### Booleans
