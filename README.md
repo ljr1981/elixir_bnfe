@@ -151,20 +151,24 @@ Because of the difference between cases 1 and 3, `"{"` denotes the opening brace
 In case 2, the use of an upper-case first letter is a consequence of the “Construct Name convention”. Special symbols are normally enclosed in double quotes (case 5), except for the double quote itself which, to avoid any confusion, appears enclosed in single quotes (case 4). In either variant, the enclosing quotes — double or single respectively — are not part of the symbol. In some contexts, such as the table of all such symbols, special symbols (cases 4 and 5) appear in bold for emphasis.
 
 In application of cases 7 and 8, occurrences of Elixir entities or function names in comments appear in italics, to avoid confusion with other comment text, as in a comment "#" Update the value of value. where the last word denotes a function of name value in the enclosing function.
+
 - - - -
 
 # Experimental Elixir Language Specification
 
 - - - -
+
 ## Defmodule
 *`Module`* ≜ **Defmodule** *`Module_name`* *`Module_do_end`*
 
 *`Module_do_end`* ≜ **do** [ *`Def_function`* ]* **end**
 
 - - - -
+
 A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` and then a `Module_do_end` block. It can be filled with zero, one or more possible `Def_function` constructs.
 
 - - - -
+
 ## Def Function
 *`Def_function`* ≜ **Def** *`Function_name`* [ **"("** [ *`Args`* ] **")"** ] *`Do_end`*
 
@@ -175,17 +179,20 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 *`Assignment`* ≜ [ *`Identifier`* **=** *`Expression`* ]
 
 - - - -
+
 ## Data Types
 *`Manifest_value` ≜
   *`Atom`* |
   *`Integer_constant`* |
   *`Float_constant`* |
-  *`Character_constant`* |
+  *`Charlist_constant`* |
   *`Boolean_constant`* |
   *`Manifest_string`*
+
 - - - -
 A manifest value is a string of text where the basic data type is self-evident (e.g. manifestly evident) from the text. Therefore, the text **123** is manifestly an integer value of one hundred and twenty three. Likewise, the text **3.14** is manifestly a floating point value equal to *Pi*.
 - - - -
+
 ### Atoms
 *`Atom`* ≜ "**:**" [ *`Sequence`* |
                     '**"**' *`Sequence`* '**"**' ]
@@ -194,6 +201,7 @@ A manifest value is a string of text where the basic data type is self-evident (
                   *`Numbers`* |
                   *`Underscore`* |
                   *`@`* }* { "**!**" | "**?**" }
+
 - - - -
 Unquoted atoms start with a colon (:) which must be immediately followed by a Unicode letter or an underscore. The atom may continue using a sequence of Unicode letters, numbers, underscores, and @. Atoms may end in ! or ?. See Unicode syntax for a formal specification. Valid unquoted atoms are: :ok, :ISO8601, and :integer?.
 
@@ -221,9 +229,28 @@ All operators in Elixir are also valid atoms. Valid examples are :foo, :FOO, :fo
 Integers (**1234**) and floats (**123.4**) in Elixir are represented as a sequence of digits that may be separated by underscore for readability purposes, such as 1_000_000. Integers never contain a dot (.) in their representation. Floats contain a dot and at least one other digit after the dot. Floats also support the scientific notation, such as 123.4e10 or 123.4E10.
 - - - -
 
-### Characters & Booleans
+### Charlists
 
-*`Character_constant`* ≜ "**'**" *`Character`* "**'**"
+*`Charlist_constant`* ≜ [ *`Single_line_charlist`* | *`Multi_line_charlist`*  ]
+
+*`Single_line_charlist`* ≜ "**'**" { *`Character`* }**⁺** "**'**"
+
+*`Multi_line_charlist`* ≜ "**'''**" { *`Character`* }**⁺** "**'''**"
+
+*`Character`* ≜ ???
+
+- - - -
+Charlists in Elixir are written in single-quotes, such as 'foo'. Any single-quote inside the string must be escaped with \. Charlists are made of non-negative integers, where each integer represents a Unicode code point.
+
+Multi-line charlists are written with three single-quotes ('''), the same way multi-line strings are.
+
+Charlists are always represented as themselves in the AST.
+
+For more in-depth information, please read the "Charlists" section in the List module.
+
+- - - -
+
+### Booleans
 
 *`Boolean_constant`* ≜ **`true`** | **`false`**
 
@@ -237,6 +264,9 @@ Integers (**1234**) and floats (**123.4**) in Elixir are represented as a sequen
 *`String`* ≜ { *`UTF8_char`* }**⁺**
 
 - - - -
+Strings are always represented as themselves in the AST.
+- - - -
+
 ## Identifiers
 *`Identifier`* ≜ *`Start_char`* [ *`Continue_char`* ]* *`End_char`*
 
@@ -246,6 +276,7 @@ Integers (**1234**) and floats (**123.4**) in Elixir are represented as a sequen
 
 *`End_char`* ≜ [ `nil` | `?` (003F) | `!` (0021) ]*
 
+- - - -
 See: [R1 Default Identifiers](https://hexdocs.pm/elixir/1.12/unicode-syntax.html#r1-default-identifiers)
 See: [R6 Filtered Normalized Identifiers](https://hexdocs.pm/elixir/1.12/unicode-syntax.html#r6-filtered-normalized-identifiers)
 - - - -
