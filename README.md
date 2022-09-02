@@ -210,11 +210,17 @@ All operators in Elixir are also valid atoms. Valid examples are :foo, :FOO, :fo
 
 *`Float_constant`* ≜ [`Sign`] `Float`
 
-*`Integer`* ≜ { *`Numeric_digit`* | '**_**' }**⁺**
+*`Integer`* ≜ { *`Digit`* | '**_**' }**⁺**
 
-*`Float`* ≜ { *`Numeric_digit`* | '**_**' }**⁺** '**.**' { *`Numeric_digit`* }**⁺**
+*`Float`* ≜ { *`Digit`* | '**_**' }**⁺** '**.**' { *`Digit`* }**⁺**
 
-*`Numeric_digit`* ≜ { 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
+*`Digit`* ≜ { 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
+
+- - - -
+Integers (**1234**) and floats (**123.4**) in Elixir are represented as a sequence of digits that may be separated by underscore for readability purposes, such as 1_000_000. Integers never contain a dot (.) in their representation. Floats contain a dot and at least one other digit after the dot. Floats also support the scientific notation, such as 123.4e10 or 123.4E10.
+- - - -
+
+### Characters & Booleans
 
 *`Character_constant`* ≜ "**'**" *`Character`* "**'**"
 
