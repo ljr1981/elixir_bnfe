@@ -235,9 +235,10 @@ Integers (**1234**) and floats (**123.4**) in Elixir are represented as a sequen
 - - - -
 
 ### Charlists
-
-*`Charlist_constant`* ≜ [ *`Single_line_charlist`* | *`Multi_line_charlist`*  ]
-
+<pre>
+*`Charlist_constant`* ≜ [ *`Single_line_charlist`* |
+                          *`Multi_line_charlist`*  ]
+</pre>
 *`Single_line_charlist`* ≜ "**'**" { *`Character`* }**⁺** "**'**"
 
 *`Multi_line_charlist`* ≜ "**'''**" { *`Character`* }**⁺** "**'''**"
