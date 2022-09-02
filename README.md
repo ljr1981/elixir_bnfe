@@ -164,9 +164,7 @@ In application of cases 7 and 8, occurrences of Elixir entities or function name
 *`Module_do_end`* ≜ **do** [ *`Def_function`* ]* **end**
 
 - - - -
-
 A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` and then a `Module_do_end` block. It can be filled with zero, one or more possible `Def_function` constructs.
-
 - - - -
 
 ## Def Function
