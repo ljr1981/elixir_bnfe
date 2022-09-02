@@ -208,10 +208,6 @@ All operators in Elixir are also valid atoms. Valid examples are :foo, :FOO, :fo
 
 *`Integer_constant`* ≜ [*`Sign`*] *`Integer`*
 
-*`Character_constant`* ≜ "**'**" *`Character`* "**'**"
-
-*`Boolean_constant`* ≜ **`true`** | **`false`**
-
 *`Float_constant`* ≜ [`Sign`] `Float`
 
 *`Integer`* ≜ { *`Numeric_digit`* | '**_**' }**⁺**
@@ -219,6 +215,10 @@ All operators in Elixir are also valid atoms. Valid examples are :foo, :FOO, :fo
 *`Float`* ≜ { *`Numeric_digit`* | '**_**' }**⁺** '**.**' { *`Numeric_digit`* }**⁺**
 
 *`Numeric_digit`* ≜ { 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
+
+*`Character_constant`* ≜ "**'**" *`Character`* "**'**"
+
+*`Boolean_constant`* ≜ **`true`** | **`false`**
 
 - - - -
 ## Identifiers
