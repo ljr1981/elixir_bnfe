@@ -47,7 +47,7 @@ Typesetting conventions complement the Construct Name convention: `construct` na
 Specimens of a terminal `construct` have no further syntactical structure. Examples include:
 
 * Reserved keywords, such as **`do`**, **`if`**, **`else`**, or **`end`**.
-* Manifest constants, such as the integer **234**; symbols such as **;** (semicolon) and **+** (plus sign).
+* Manifest constants, such as the integer **234**; symbols such as **;** (semicolon) and **+** (plus sign, superscripted ⁺).
 * Identifiers, used to denote function names or variables, such as `my_func` or `x`.
 
 The `specimens` of terminal `constructs` are called `tokens`.
@@ -93,7 +93,7 @@ Every `specimen` of the corresponding `construct` consists of exactly one `speci
 A `repetition` `right-side` is of one of the two forms:
 
 * {C § ...}*
-* {C § ...}+
+* {C § ...}⁺
 
 where C and § (the separator) are constructs.
 
@@ -102,7 +102,7 @@ Every `specimen` of the corresponding `construct` consists of zero or more (one 
 The following abbreviations may be used if the separator is empty:
 
 * C*
-* C+
+* C⁺
 
 - - - -
 The language definition makes only moderate use of recursion thanks to the availability of Repetition productions: when the purpose is simply to describe a construct whose specimens may contain successive specimens of another construct, a Repetition generally gives a clearer picture; see for example the definition of Compound as a repetition of Instruction. Recursion remains necessary to describe constructs with unbounded nesting possibilities, such as Conditional and Loop.
@@ -214,9 +214,9 @@ All operators in Elixir are also valid atoms. Valid examples are :foo, :FOO, :fo
 
 *`Float_constant`* ≜ [`Sign`] `Float`
 
-*`Integer`* ≜ { *`Numeric_digit`* | '**_**' }+
+*`Integer`* ≜ { *`Numeric_digit`* | '**_**' }⁺
 
-*`Float`* ≜ { { *`Numeric_digit`* | '**_**' }+ '**.**' { *`Numeric_digit`* }+ }
+*`Float`* ≜ { { *`Numeric_digit`* | '**_**' }⁺ '**.**' { *`Numeric_digit`* }⁺ }
 
 *`Numeric_digit`* ≜ { 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
 
