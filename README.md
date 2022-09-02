@@ -288,7 +288,7 @@ Maps use the %{...} notation and each key-value is given by pairs marked with =>
 Both keyword lists (list of two-element tuples where the first element is atom) and maps with atom keys support a keyword notation where the colon character : is moved to the end of the atom. %{hello: "world"} is equivalent to %{:hello => "world"} and [foo: :bar] is equivalent to [{:foo, :bar}]. This notation is a syntax sugar that emits the same AST representation. It will be explained in later sections.
 - - - -
 
-## Structs
+### Structs
 
 *`Struct_constant`* ≜ '**%**' *`Struct_name`* '**<<**' { *`Element`* }**⁺** '**>>**'
 
