@@ -237,7 +237,7 @@ Integers (**1234**) and floats (**123.4**) in Elixir are represented as a sequen
 
 *`Multi_line_charlist`* ≜ "**'''**" { *`Character`* }**⁺** "**'''**"
 
-*`Character`* ≜ ???
+*`Character`* ≜ [ `0..0x10FFFF` | `0xD800..0xDFFF` ]
 
 - - - -
 Charlists in Elixir are written in single-quotes, such as 'foo'. Any single-quote inside the string must be escaped with \. Charlists are made of non-negative integers, where each integer represents a Unicode code point.
