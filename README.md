@@ -182,16 +182,16 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 
 ## Data Types
 <pre>*`Manifest_value` ≜
-  *`Atom`* |
-  *`Integer_constant`* |
-  *`Float_constant`* |
-  *`Charlist_constant`* |
-  *`Boolean_constant`* |
-  *`Manifest_string`* |
-  *`List_constant`* |
-  *`Tuple_constant`* |
-  *`Binary_constant`* |
-  *`Map_constant`*
+      *`Atom`* |
+      *`Integer_constant`* |
+      *`Float_constant`* |
+      *`Charlist_constant`* |
+      *`Boolean_constant`* |
+      *`Manifest_string`* |
+      *`List_constant`* |
+      *`Tuple_constant`* |
+      *`Binary_constant`* |
+      *`Map_constant`*
 </pre>
 
 - - - -
