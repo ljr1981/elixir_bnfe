@@ -172,9 +172,9 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 ## Def Function
 *`Def_function`* ≜ **Def** *`Function_name`* [ '**(**' [ *`Args`* ] '**)**' ] *`Do_end`*
 
-*`Do_end`* ≜ *`do`* [ *`Instructions`* ]* *`end`*
+*`Do_end`* ≜ *`do`* { *`Instructions`* }* *`end`*
 
-*`Instructions`* ≜ [ *`Assignment`* | *`Expression`* | *`Repitition`* ]*
+*`Instructions`* ≜ { *`Assignment`* | *`Expression`* | *`Repitition`* }*
 
 *`Assignment`* ≜ [ *`Identifier`* '**=**' *`Expression`* ]
 
@@ -198,8 +198,7 @@ A manifest value is a string of text where the basic data type is self-evident (
 - - - -
 
 ### Atoms
-*`Atom`* ≜ "**:**" [ *`Sequence`* |
-                    '**"**' *`Sequence`* '**"**' ]
+*`Atom`* ≜ "**:**" [ *`Sequence`* | '**"**' *`Sequence`* '**"**' ]
 
 *`Sequence`* ≜ { *`Unicode_letters`* |
                   *`Numbers`* |
@@ -207,13 +206,13 @@ A manifest value is a string of text where the basic data type is self-evident (
                   *`@`* }* { '**!**' | '**?**' }
 
 - - - -
-Unquoted atoms start with a colon (:) which must be immediately followed by a Unicode letter or an underscore. The atom may continue using a sequence of Unicode letters, numbers, underscores, and @. Atoms may end in ! or ?. See Unicode syntax for a formal specification. Valid unquoted atoms are: :ok, :ISO8601, and :integer?.
+Unquoted atoms start with a colon (:) which must be immediately followed by a Unicode letter or an underscore. The atom may continue using a sequence of Unicode letters, numbers, underscores, and @. Atoms may end in ! or ?. See Unicode syntax for a formal specification. Valid unquoted atoms are: `:ok`, `:ISO8601`, and `:integer?`.
 
-If the colon is immediately followed by a pair of double- or single-quotes surrounding the atom name, the atom is considered quoted. In contrast with an unquoted atom, this one can be made of any Unicode character (not only letters), such as :'🌢 Elixir', :"++olá++", and :"123".
+If the colon is immediately followed by a pair of double- or single-quotes surrounding the atom name, the atom is considered quoted. In contrast with an unquoted atom, this one can be made of any Unicode character (not only letters), such as `:'🌢 Elixir'`, `:"++olá++"`, and `:"123"`.
 
-Quoted and unquoted atoms with the same name are considered equivalent, so :atom, :"atom", and :'atom' represent the same atom. The only catch is that the compiler will warn when quotes are used in atoms that do not need to be quoted.
+Quoted and unquoted atoms with the same name are considered equivalent, so `:atom`, `:"atom"`, and `:'atom'` represent the same atom. The only catch is that the compiler will warn when quotes are used in atoms that do not need to be quoted.
 
-All operators in Elixir are also valid atoms. Valid examples are :foo, :FOO, :foo_42, :foo@bar, and :++. Invalid examples are :@foo (@ is not allowed at start), :123 (numbers are not allowed at start), and :(*) (not a valid operator).
+All operators in Elixir are also valid atoms. Valid examples are `:foo`, `:FOO`, `:foo_42`, `:foo@bar`, and `:++`. Invalid examples are `:@foo` (@ is not allowed at start), `:123` (numbers are not allowed at start), and `:(*)` (not a valid operator).
 - - - -
 
 ### Numbers
