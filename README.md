@@ -90,7 +90,7 @@ A choice `right-side` is of the form `C1 | C2 | ... | Cₙ (n > 1)`, where every
 Every `specimen` of the corresponding `construct` consists of exactly one `specimen` of one of the Cₙ.
 
 #### Definition: Repetition production, separator
-A `repetition` `right-side` is of one of the two forms:
+A `repetition` `right-side` is of one of the two forms between open braces ( { ... } ):
 
 * {C § ...}*
 * {C § ...}⁺
