@@ -271,19 +271,19 @@ Strings are always represented as themselves in the AST.
 - - - -
 
 ### Lists
-*`List_constant`* ≜ **[** { *`Element`* }**⁺** **]**
+*`List_constant`* ≜ **'['** { *`Element`* }**⁺** **']'**
 
 ### Tuples
-*`Tuple_constant`* ≜ **{** { *`Element`* }**⁺** **}**
+*`Tuple_constant`* ≜ **'{'** { *`Element`* }**⁺** **'}'**
 
 ### Binaries
-*`Binary_constant`* ≜ **<<** { *`Element`* }**⁺** **>>**
+*`Binary_constant`* ≜ **'<<'** { *`Element`* }**⁺** **'>>'**
 
 - - - -
 Data structures such as lists, tuples, and binaries are marked respectively by the delimiters [...], {...}, and <<...>>. Each element is separated by comma. A trailing comma is also allowed, such as in [1, 2, 3,].- - - -
 
 ### Maps
-*`Map_constant`* ≜ **%<<** { *`Element`* }**⁺** **>>**
+*`Map_constant`* ≜ **'%<<'** { *`Element`* }**⁺** **'>>'**
 
 - - - -
 Maps use the %{...} notation and each key-value is given by pairs marked with =>, such as %{"hello" => 1, 2 => "world"}.
