@@ -186,7 +186,7 @@ A `Module` consist (≜) of a `Defmodule` keyword followed by a `Module_name` an
 A manifest value is a string of text where the basic data type is self-evident (e.g. manifestly evident) from the text. Therefore, the text **123** is manifestly an integer value of one hundred and twenty three. Likewise, the text **3.14** is manifestly a floating point value equal to *Pi*.
 - - - -
 ### Atoms
-*`Atom`* ≜ "**:**" [ *`Sequence`* | 
+*`Atom`* ≜ "**:**" [ *`Sequence`* |
                     '**"**' *`Sequence`* '**"**' ]
 
 *`Sequence`* ≜ { *`Unicode_letters`* |
@@ -210,7 +210,7 @@ All operators in Elixir are also valid atoms. Valid examples are :foo, :FOO, :fo
 
 *`Character_constant`* ≜ " ' " *`Character`* " ' "
 
-*`Boolean_constant`* ≜ **true** | **false**
+*`Boolean_constant`* ≜ **`true`** | **`false`**
 
 *`Float_constant`* ≜ [`Sign`] `Float`
 
